@@ -14,5 +14,9 @@ jobs:
             fetch-depth: 0
         - name: SonarQube Scan
           uses: SonarSource/sonarqube-scan-action@v5.0.0
+          with:
+            args: >
+                -Dsonar.projectKey=oimurat_sonar-test
+                -Dsonar.organization=oimurat
           env:
               SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
